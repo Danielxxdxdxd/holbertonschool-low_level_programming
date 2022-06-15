@@ -22,7 +22,7 @@ void times_table(void)
 				_putchar((times_table / 10) + '0');
 				_putchar((times_table % 10) + '0');
 			}
-            else
+			else
 			{
 				_putchar(' ');
 				_putchar(' ');
