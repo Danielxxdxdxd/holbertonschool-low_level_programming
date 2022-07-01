@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * prime - function that print a prime
+ * _prime - function that print a prime
  * @x: input parameter
  * @y: input parameter
  * Return: Always 0.
