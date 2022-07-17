@@ -1,19 +1,27 @@
-CC = gcc
-SRC = main.c holberton.c
-OBJ = $(SRC:.c=.o)
-NAME = holberton
-CFLAGS = -Wall -Werror -Wextra -pedantic
-.PHONY : all clean oclean fclean re
+# https://www.gnu.org/software/make/manual/html_node/Implicit-Variables.html
+# RM default value is rm -f
+# .PHONY run the rule yes or yes
+# The order of requeriments is important
+# The implicit rule of objects runs with the CFLAGS
 
-all : m.h $(OBJ)
+CC=gcc
+SRC=main.c holberton.c
+OBJ=$(SRC:.c=.o)
+NAME=holberton
+CFLAGS=-Wall -Werror -Wextra -pedantic
+HEAD=m.h
+
+all: $(HEAD) $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-clean :
+clean:
 	$(RM) *~ $(NAME)
 
-oclean :
+oclean:
 	$(RM) $(OBJ)
 
-fclean : clean oclean
+fclean: clean oclean
 
-re : oclean all
+re: oclean all
+
+.PHONY: all clean oclean fclean re
