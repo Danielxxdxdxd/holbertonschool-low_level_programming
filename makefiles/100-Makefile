@@ -5,9 +5,9 @@
 # The implicit rule of objects runs with the CFLAGS
 
 CC=gcc
-SRC=main.c holberton.c
+SRC=main.c school.c
 OBJ=$(SRC:.c=.o)
-NAME=holberton
+NAME=school
 CFLAGS=-Wall -Werror -Wextra -pedantic
 HEAD=m.h
 
